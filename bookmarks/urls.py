@@ -7,6 +7,7 @@ from django.urls import path, include
 urlpatterns = [
     path('account/', include('account.urls')),
     path('admin/', admin.site.urls),
+    path('social-auth/', include('social_django.urls', namespace='social'))
 ]
 if settings.DEBUG:
     urlpatterns += static(
